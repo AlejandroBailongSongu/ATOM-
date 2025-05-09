@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Plataforma Educativa - Actualizaciones</title>
+  <subtitle>Últimos contenidos y recursos educativos publicados</subtitle>
+  <link href="https://www.plataformaeducativa.com/canales/canal-educativo.atom" rel="self"/>
+  <link href="https://www.plataformaeducativa.com"/>
+  <updated>2025-05-09T10:00:00Z</updated>
+  <author>
+    <name>Equipo Editorial Plataforma Educativa</name>
+  </author>
+  <id>https://www.plataformaeducativa.com/canales/canal-educativo.atom</id>
+
+  <entry>
+    <title>Curso de Introducción a la Inteligencia Artificial</title>
+    <link href="https://www.plataformaeducativa.com/cursos/ia-introduccion"/>
+    <id>https://www.plataformaeducativa.com/cursos/ia-introduccion</id>
+    <updated>2025-05-07T09:00:00Z</updated>
+    <summary>Un curso básico para iniciarse en los conceptos fundamentales de la inteligencia artificial.</summary>
+    <author>
+      <name>Laura Martínez</name>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Guía de estudio: Álgebra lineal</title>
+    <link href="https://www.plataformaeducativa.com/guias/algebra-lineal"/>
+    <id>https://www.plataformaeducativa.com/guias/algebra-lineal</id>
+    <updated>2025-05-06T15:30:00Z</updated>
+    <summary>Material de apoyo para estudiantes de ingeniería y ciencias con ejemplos resueltos.</summary>
+    <author>
+      <name>Carlos Fernández</name>
+    </author>
+  </entry>
+
+  <entry>
+    <title>Podcast: Aprender a programar desde cero</title>
+    <link href="https://www.plataformaeducativa.com/podcast/programacion-desde-cero"/>
+    <id>https://www.plataformaeducativa.com/podcast/programacion-desde-cero</id>
+    <updated>2025-05-04T12:45:00Z</updated>
+    <summary>Conversaciones con expertos sobre cómo empezar a programar sin conocimientos previos.</summary>
+    <author>
+      <name>Andrés Salas</name>
+    </author>
+  </entry>
+
+</feed>
