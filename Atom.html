@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canal Educativo - Atom Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .entry {
+      background: white;
+      border-left: 5px solid #4CAF50;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .entry h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    .entry p {
+      margin: 0.5rem 0;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Actualizaciones Educativas</h1>
+  <div id="feed"></div>
+
+  <script>
+    fetch('atomeve.xml')
+      .then(response => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, "application/xml"))
+      .then(data => {
+        const entries = data.querySelectorAll("entry");
+        const container = document.getElementById("feed");
+
+        entries.forEach(entry => {
+          const title = entry.querySelector("title").textContent;
+          const link = entry.querySelector("link").getAttribute("href");
+          const summary = entry.querySelector("summary").textContent;
+          const updated = entry.querySelector("updated").textContent;
+          const author = entry.querySelector("author name").textContent;
+
+          const html = `
+            <div class="entry">
+              <h2><a href="${link}" target="_blank">${title}</a></h2>
+              <p>${summary}</p>
+              <p class="meta">Por <strong>${author}</strong> · Publicado el <time>${updated.split("T")[0]}</time></p>
+            </div>
+          `;
+          container.insertAdjacentHTML("beforeend", html);
+        });
+      });
+  </script>
+</body>
+</html>
